@@ -1,0 +1,71 @@
+/**app.wxss**/
+page {
+  min-height: 100%;
+  font-size: 32rpx;
+}
+
+view, swiper {
+  box-sizing: border-box;
+  color: #534a46;
+}
+
+button[type="primary"] {
+  background-color: #647eb5;
+}
+
+.button-hover[type="primary"] {
+  background-color: #006296;
+}
+
+button[disabled][type="primary"] {
+  background-color: transparent;
+  color: #d3d3d4;
+}
+
+.hide {
+  display: none !important;
+}
+
+.fh {
+  height: 100%;
+}
+
+.type0 {
+  background: url(http://ac-spiwms7y.clouddn.com/c1a8bc053a289a6acbc2.png) no-repeat center;
+  background-size: contain;
+}
+
+.type1 {
+  background: url(http://ac-spiwms7y.clouddn.com/11227b2ff9f1ddab9a52.png) no-repeat center;
+  background-size: contain;
+}
+
+.type2 {
+  background: url(http://ac-spiwms7y.clouddn.com/1456b270ac1691834835.png) no-repeat center;
+  background-size: contain;
+}
+
+.type3 {
+  background: url(http://ac-spiwms7y.clouddn.com/7dd31a86177b72472d5c.png) no-repeat center;
+  background-size: contain;
+}
+
+.type4 {
+  background: url(http://ac-spiwms7y.clouddn.com/743484456c4a8eb63f7d.png) no-repeat center;
+  background-size: contain;
+}
+
+.type5 {
+  background: url(http://ac-spiwms7y.clouddn.com/063852419c1453051109.png) no-repeat center;
+  background-size: contain;
+}
+
+.type6 {
+  background: url(http://ac-spiwms7y.clouddn.com/6acdd670c8852c2ab80a.png) no-repeat center;
+  background-size: contain;
+}
+
+.type7 {
+  background: url(http://ac-spiwms7y.clouddn.com/ea600870321ebb20cb85.png) no-repeat center;
+  background-size: contain;
+}
