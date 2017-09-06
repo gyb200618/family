@@ -1,0 +1,53 @@
+/* list.wxss */
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  margin: 40rpx;
+  height: 240rpx;
+  padding: 20rpx;
+  border: 1rpx solid #f6f0ce;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.list-item .l-area {
+  width: 300rpx;
+  border-right: 2rpx solid #f6f0ce;
+}
+
+.l-area .sample-img {
+  height: 200rpx;
+  margin-right: 20rpx;
+  border-radius: 12rpx;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  overflow: hidden;
+}
+
+.cat1 {
+  background-image: url(http://ac-8lepgylb.clouddn.com/e19f8af5b2c8cdc1a995.jpg);
+}
+
+.cat2 {
+  background-image: url(http://ac-8lepgylb.clouddn.com/ab6daa04d389f6b42016.jpg);
+}
+
+.cat3 {
+  background-image: url(http://ac-8lepgylb.clouddn.com/09ff96921196df1b30c4.jpg);
+}
+
+.cat4 {
+  background-image: url(http://ac-8lepgylb.clouddn.com/3dc9d81e38bb5584c8a8.jpg);
+}
+
+.cat5 {
+  background-image: url(http://ac-8lepgylb.clouddn.com/68943b52fc3a113d949f.jpg);
+}
+
+.list-item .r-area {
+  flex: 1;
+  padding-left: 20rpx;
+}
+

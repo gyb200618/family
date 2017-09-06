@@ -1,0 +1,46 @@
+<!--list.wxml-->
+<view class="list-item" bindtap="intoSpaceDetail">
+  <view class="l-area">
+    <view class="sample-img cat1"></view>
+  </view>
+  <view class="r-area">
+    <view class="category">客厅</view>
+    <view class="classname">10000 / 9000</view>
+  </view>
+</view>
+<view class="list-item">
+  <view class="l-area">
+    <view class="sample-img cat2"></view>
+  </view>
+  <view class="r-area">
+    <view class="category">餐厅</view>
+    <view class="classname">10000 / 9000</view>
+  </view>
+</view>
+<view class="list-item">
+  <view class="l-area">
+    <view class="sample-img cat3"></view>
+  </view>
+  <view class="r-area">
+    <view class="category">厨房</view>
+    <view class="classname">10000 / 9000</view>
+  </view>
+</view>
+<view class="list-item">
+  <view class="l-area">
+    <view class="sample-img cat4"></view>
+  </view>
+  <view class="r-area">
+    <view class="category">卫生间</view>
+    <view class="classname">10000 / 9000</view>
+  </view>
+</view>
+<view class="list-item">
+  <view class="l-area">
+    <view class="sample-img cat5"></view>
+  </view>
+  <view class="r-area">
+    <view class="category">卧室</view>
+    <view class="classname">10000 / 9000</view>
+  </view>
+</view>
