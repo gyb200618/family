@@ -1,0 +1,27 @@
+<!--list.wxml-->
+<scroll-view scroll-y="true" class="fh">
+  <view class="content">
+    <view class="task-header">
+      <view class="title">{{task.name}}</view>
+      <view class="date">{{task.date}}</view>
+    </view>
+
+    <view class="task-list">
+      <block wx:for="{{task.detail}}">
+        <view class="item {{item.status ? 'done' : ''}}">
+          <view class="label">{{item.description}}</view>
+          <view class="dot" bindtap="clickDone" data-idx="{{index}}">✔</view>
+        </view>
+      </block>
+    </view>
+
+    <progress class="complete-rate" percent="{{task.rate}}" />
+
+    <view class="add-area">
+      <view class="task-input">
+        <input maxlength="20" placeholder="建立新任务（15字以内）" />
+      </view>
+      <view class="add-btn"></view>
+    </view>
+  </view>
+</scroll-view>

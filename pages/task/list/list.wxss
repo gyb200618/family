@@ -1,0 +1,91 @@
+/* list.wxss */
+
+.content {
+  padding: 40rpx;
+}
+
+.task-header {
+  margin-bottom: 40rpx;
+}
+
+.task-header .title {
+  font-size: 40rpx;
+}
+
+.task-header .date {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #d3d3d4;
+}
+
+.task-list {
+  margin-bottom: 80rpx;
+}
+
+.item {
+  position: relative;
+  margin-bottom: 40rpx;
+}
+
+.item::after {
+  display: block;
+  height: 0;
+  content: '';
+  clear: both;
+}
+
+.item .label {
+  float: left;
+}
+
+.done .label {
+  color: #d3d3d4;
+  text-decoration: line-through;
+}
+
+.item .dot {
+  float: right;
+  margin-right: 6rpx;
+  width: 36rpx;
+  height: 36rpx;
+  text-indent: 100rpx;
+  border-radius: 50%;
+  border: 6rpx solid #647eb5;
+}
+
+.done .dot {
+  text-indent: 0;
+  line-height: 36rpx;
+  font-size: 42rpx;
+  font-weight: bold;
+  text-align: center;
+  color: #aacf52;
+  border: none;
+}
+
+.complete-rate {
+  margin-bottom: 80rpx;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.add-area {
+  position: relative;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid #f6f0ce;
+}
+
+.add-area .task-input {
+  margin-right: 64rpx;
+}
+
+.add-area .add-btn {
+  position: absolute;
+  right: 0;
+  bottom: 10rpx;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #aacf52;
+}
