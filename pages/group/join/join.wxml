@@ -1,0 +1,6 @@
+<!--join.wxml-->
+<view class="container">
+  <view>Group Info</view>
+
+  <button bindtap="joinGroup">Join</button>
+</view>
