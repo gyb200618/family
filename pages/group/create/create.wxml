@@ -1,0 +1,16 @@
+<!--create.wxml-->
+<view class="container">
+  <form>
+    <view class="form-item">
+      <view class="form-label">Group Name</view>
+      <input name="group-name" />
+    </view>
+    <view class="form-item">
+      <view class="form-label">Description</view>
+      <textarea auto-height class="txt-area" name="group-desc"/>
+    </view>
+    <view class="form-item">
+      <button>ICON</button>
+    </view>
+  </form>
+</view>

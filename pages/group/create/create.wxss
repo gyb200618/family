@@ -1,0 +1,5 @@
+/* create.wxss */
+
+txt-area {
+  height: 6rem;
+}
