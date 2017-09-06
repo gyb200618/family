@@ -1,0 +1,11 @@
+<!--create.wxml-->
+
+<view class="stamp-btn" bindtap="remark">签到</view>
+
+<view class="stamp-list">
+<block wx:for="{{remark}}">
+    <view class="icon-wrap">
+    <view class="icon-item {{item.status ? 'stamp' : ''}} {{item.bonus ? 'bonus' : ''}}"></view>
+    </view>
+</block>
+</view>

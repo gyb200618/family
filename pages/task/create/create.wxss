@@ -1,0 +1,49 @@
+/* create.wxss */
+
+.stamp-btn {
+  margin: 40rpx auto 80rpx;
+  width: 180rpx;
+  height: 180rpx;
+  font-size: 40rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 180rpx;
+  border-radius: 50%;
+  border: 1rpx solid #f6f0ce;
+  background: #647eb5;
+}
+
+.stamp-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 40rpx;
+}
+
+.stamp-list .icon-wrap {
+  width: 128rpx;
+  height: 128rpx;
+}
+
+.stamp-list .icon-item {
+  width:100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1rpx solid #f6f0ce;
+  background: url(http://ac-8lepgylb.clouddn.com/b807b69d5ad38c722fdf.png) no-repeat center;
+  background-size: contain;
+}
+
+.stamp-list .stamp {
+  background-image: url(http://ac-8lepgylb.clouddn.com/5afb1c550020deefbc84.png);
+}
+
+.stamp-list .bonus {
+  border-color: #647eb5;
+  border-width: 4rpx;
+}
+
+.stamp-list .stamp.bonus {
+  border-color: #aacf52;
+}
