@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/group/create/create",
+    "pages/group/join/join",
+    "pages/group/info/info",
+    "pages/account/list/list",
+    "pages/task/list/list",
+    "pages/task/create/create",
+    "pages/account/add/add",
+    "pages/fitment/index/index",
+    "pages/fitment/check/check",
+    "pages/fitment/budget/list/list",
+    "pages/fitment/sample/sample",
+    "pages/fitment/budget/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  }
+}
