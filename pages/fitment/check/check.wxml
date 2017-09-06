@@ -1,0 +1,29 @@
+<!--check.wxml-->
+<view class="title">橱柜验收</view>
+
+<swiper class="content-wrap">
+  <swiper-item>
+    <view class="con">厨房设备安装前的检验。</view>
+    <view class="op-area">
+      <view data-ret="2" class="btn-op btn-fail {{isPass == 2 ? 'btn-choose' : (isPass == 1 ? 'hide' : '')}}" bindtap="checkItem">{{isPass == 2 ? 'Fail' : '✘'}}</view>
+      <view data-ret="1" class="btn-op btn-pass {{isPass == 1 ? 'btn-choose' : (isPass == 2 ? 'hide' : '')}}" bindtap="checkItem">{{isPass == 1 ? 'Pass' : '✔'}}</view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="con">吊柜的安装应根据不同的墙体采用不同的固定方法。</view>
+    <view class="op-area">
+      <view data-ret="2" class="btn-op btn-fail {{isPass == 2 ? 'btn-choose' : (isPass == 1 ? 'hide' : '')}}" bindtap="checkItem">{{isPass == 2 ? 'Fail' : '✘'}}</view>
+      <view data-ret="1" class="btn-op btn-pass {{isPass == 1 ? 'btn-choose' : (isPass == 2 ? 'hide' : '')}}" bindtap="checkItem">{{isPass == 1 ? 'Pass' : '✔'}}</view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="con">底柜安装应先调整水平旋钮，保证各柜体台面、前脸均在一个水平面上，两柜连接使用木螺钉，后背板通管线、表、阀门等应在背板划线打孔。</view>
+    <view class="op-area">
+      <view data-ret="2" class="btn-op btn-fail {{isPass == 2 ? 'btn-choose' : (isPass == 1 ? 'hide' : '')}}" bindtap="checkItem">{{isPass == 2 ? 'Fail' : '✘'}}</view>
+      <view data-ret="1" class="btn-op btn-pass {{isPass == 1 ? 'btn-choose' : (isPass == 2 ? 'hide' : '')}}" bindtap="checkItem">{{isPass == 1 ? 'Pass' : '✔'}}</view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="circle-rate"></view>
+  </swiper-item>
+</swiper>
