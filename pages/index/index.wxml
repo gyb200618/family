@@ -1,0 +1,37 @@
+<swiper class="fh">
+  <swiper-item>
+    <view class="dot1 {{loaded ? 'ball-translate1' : 'ball-scale1'}}" bindtap="scanGroup">Join</view>
+    <view class="dot2 {{loaded ? 'ball-translate2' : 'ball-scale2'}}" bindtap="addGroup">Add</view>
+  </swiper-item>
+  <block wx:for="{{groups}}" wx:key="*this" wx:for-item="group">
+    <swiper-item>
+      <!-- <scroll-view scroll-y="true" class="fh"> -->
+        <view class="group-header">
+          <view class="group-info-area">
+            <view class="tip-area">
+              <!-- <icon type="info" size="23" /> -->
+            </view>
+            <view class="group-info">
+              <image class="group-icon" src="{{group.flag}}" mode="aspectFill"></image>
+              <view class="group-name">{{group.name}}</view>
+              <view class="group-desc">{{group.description}}</view>
+            </view>
+          </view>
+          <view class="group-btn-area">
+            <view class="btn fitment-btn" data-group="{{group.id}}" bindtap="intoFitment"></view>
+            <view class="btn task-btn" data-group="{{group.id}}" bindtap="showTaskList"></view>
+            <view class="btn account-btn" data-group="{{group.id}}" bindtap="showAccountList"></view>
+          </view>
+        </view>
+        <block wx:for="{{group.members}}" wx:key="*this" wx:for-item="member">
+          <view class="member-item">
+            <view>{{member.name}}</view>
+            <view class="avatar {{member.sex == 1 ? 'male' : 'female'}}">
+              <image src="{{member.avatar}}" class="avatar-img" mode="aspectFill"></image>
+            </view>
+          </view>
+        </block>
+      <!-- </scroll-view> -->
+    </swiper-item>
+  </block>
+</swiper>

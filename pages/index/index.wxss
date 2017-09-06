@@ -1,0 +1,215 @@
+/**index.wxss**/
+
+page {
+  height: 100%;
+}
+
+/** ------ style for group join and create page ------ **/
+
+.dot1, .dot2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200rpx;
+  height: 200rpx;
+  line-height: 200rpx;
+  margin-top: -100rpx;
+  margin-left: -100rpx;
+  border-radius: 50%;
+  border: 1rpx solid #647eb5; 
+  overflow: hidden;
+  text-align: center;
+}
+
+.dot1 {
+  text-indent: -1000rpx;
+}
+
+.dot2 {
+  text-indent: 1000rpx;
+}
+
+.ball-scale1, .ball-scale2 {
+  animation: ani-ball-scale 1.25s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
+}
+
+.ball-scale1 {
+  animation-delay: 0s;
+}
+
+.ball-scale2 {
+  animation-delay: 0.5s;
+}
+
+@keyframes ani-ball-scale {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+
+  25% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+
+  70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.ball-translate1 {
+  animation: ani-ball-translate1 0.5s cubic-bezier(0.21, 0.53, 0.56, 0.8) forwards;
+}
+
+.ball-translate2 {
+  animation: ani-ball-translate2 0.5s cubic-bezier(0.21, 0.53, 0.56, 0.8) forwards;
+}
+
+@keyframes ani-ball-translate1 {
+  0% {
+    margin-top: -100rpx;
+  }
+
+  100% {
+    margin-top: -300rpx;
+    text-indent: 0;
+  }
+}
+
+@keyframes ani-ball-translate2 {
+  0% {
+    margin-top: -100rpx;
+  }
+
+  100% {
+    margin-top: 100rpx;
+    text-indent: 0;
+  }
+}
+
+/** ------ style for group info ------ **/
+
+.group-header {
+  display: flex;
+  flex-direction: row;
+  height: 600rpx;
+  border-bottom: 1rpx solid #f6f0ce;
+}
+
+.group-info-area {
+  flex: 1;
+}
+
+.tip-area {
+  width: 0;
+  height: 120rpx;
+  padding-left: 100rpx;
+  padding-top: 30rpx;
+  border-bottom: 1rpx solid #f6f0ce;
+}
+
+.group-info {
+  padding: 80rpx 40rpx 20rpx 100rpx;
+}
+
+.group-icon {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  border: 1rpx solid #f6f0ce;
+}
+
+.group-name {
+  margin-top: 30rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.group-desc {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #d3d3d4;
+}
+
+.group-btn-area {
+  position: relative;
+  width: 180rpx;
+  border-left: 1rpx solid #f6f0ce;
+}
+
+.group-btn-area .btn {
+  position: absolute;
+  left: 40rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  /* animation: ani-btn-bg 1.25s infinite alternate; */
+  border: 1rpx solid #f6f0ce;
+}
+
+.group-btn-area .fitment-btn {
+  bottom: 320rpx;
+  background: url(http://ac-8lepgylb.clouddn.com/7ef1214f102b15d2abd1.png) no-repeat center;
+  background-size: contain;
+}
+
+.group-btn-area .task-btn {
+  bottom: 180rpx;
+  background-color: #647eb5;
+}
+
+.group-btn-area .account-btn {
+  bottom: 40rpx;
+  background: url(http://ac-8lepgylb.clouddn.com/feb6a7ee9733e02113ef.png) no-repeat center;
+  background-size: contain;
+}
+
+
+@keyframes ani-btn-bg {
+  0% {
+    background-color: #647eb5;
+  }
+
+  100% {
+    background-color: #fff;
+  }
+}
+
+/** ------ style for group member list ------ **/
+
+.member-item {
+  position: relative;
+  height: 240rpx;
+  padding: 40rpx 0 0 100rpx;
+  border-bottom: 1rpx solid #f6f0ce;
+}
+
+.avatar {
+  position: absolute;
+  top: 40rpx;
+  right: 0;
+  width: 180rpx;
+  height: 48rpx;
+  padding-left: 40rpx;
+  border-left: 4rpx solid #f6f0ce;
+}
+
+.male {
+  border-color: #647eb5;
+}
+
+.female {
+  border-color: #eb6133;
+}
+
+.avatar-img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1rpx solid #f6f0ce;
+}
