@@ -1,0 +1,12 @@
+/* sample.wxss */
+
+
+page {
+  height: 100%;
+}
+
+.full-image {
+  height: 100%;
+  background: url(http://ac-8lepgylb.clouddn.com/eb7150eea32d7244348d.jpg) no-repeat center;
+  background-size: contain;
+}
