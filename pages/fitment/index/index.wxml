@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<!-- <scroll-view scroll-y="true" class="fh"> -->
+  <view class="top-area">
+    <view class="cover"></view>
+    <view class="avatar"></view>
+  </view>
+
+  <view class="info-area">
+    <view class="title">越湖家天下</view>
+    <view class="info">93平方米 3室2厅</view>
+  </view>
+
+  <view class="btn-area">
+    <view class="btn-item">
+      <view class="btn-op" bindtap="showLayout">户型图</view>
+    </view>
+    <view class="btn-item">
+      <view class="btn-op">装修方案</view>
+    </view>
+    <view class="btn-item">
+      <view class="btn-op" bindtap="showBudget">预算</view>
+    </view>
+  </view>
+
+  <view class="op-list">
+    <view class="op-item" bindtap="callProperty">物业</view>
+    <view class="op-item">装修日历</view>
+    <view class="op-item">装修合同</view>
+    <view class="op-item" bindtap="intoCheck">验收</view>
+  </view>
+
+<!-- </scroll-view> -->

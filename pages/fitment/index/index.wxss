@@ -1,0 +1,92 @@
+/* index.wxss */
+
+.top-area {
+  position: relative;
+  height: 400rpx;
+  background: url(http://ac-8lepgylb.clouddn.com/7f8a271ca596d2b7a34c.jpg) no-repeat center;
+  background-size: cover;
+  border-bottom: 1rpx solid #f6f0ce;
+}
+
+.cover {
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+}
+
+.top-area .avatar {
+  position: absolute;
+  bottom: -90rpx;
+  left: 50%;
+  margin-left: -90rpx;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  border: 1rpx solid #f6f0ce;
+  background: url(http://ac-8lepgylb.clouddn.com/3c2d989e84030853ef62.jpg) no-repeat center;
+  background-size: contain;
+}
+
+.info-area {
+  margin-top: 120rpx;
+  text-align: center;
+}
+
+.info-area .title {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.info-area .info {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #d3d3d4;
+}
+
+.btn-area {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60rpx;
+}
+
+.btn-area .btn-item {
+  flex: 1;
+  height: 180rpx;
+  position: relative;
+}
+
+.btn-item .btn-op {
+  position: absolute;
+  width: 160rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  text-align: center;
+  font-size: 24rpx;
+  border-radius: 50%;
+  border: 1rpx solid #647eb5;
+}
+
+
+
+.btn-item:first-child .btn-op {
+  right: 0;
+}
+
+.btn-item:nth-child(2) .btn-op {
+  left: 50%;
+  margin-left: -80rpx;
+}
+
+.btn-item:nth-child(3) .btn-op {
+  left: 0;
+}
+
+.op-list {
+  margin: 60rpx 0;
+  padding: 0 40rpx;
+}
+
+.op-list .op-item {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f6f0ce;
+}
