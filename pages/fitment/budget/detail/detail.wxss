@@ -1,0 +1,24 @@
+/* detail.wxss */
+
+.list-item {
+  margin: 40rpx;
+  padding: 20rpx;
+  border: 1rpx solid #f6f0ce;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.list-item .bar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.bar .cost-bar {
+  flex: 1;
+}
+
+.bar .label {
+  width: 100rpx;
+  text-align: right;
+}
