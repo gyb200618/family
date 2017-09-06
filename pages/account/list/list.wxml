@@ -1,0 +1,41 @@
+<!--list.wxml-->
+<view class="account-top" bindtap="tapOuter" animation="{{animationData}}">
+  <view class="cost-status" bindtap="record">
+    {{total}}
+  </view>
+</view>
+<scroll-view scroll-y="true" bindtap="tapOuter" bindscrolltolower="loadMore" bindscrolltoupper="refresh" class="account-list">
+  <view wx:if="{{isRefresh}}" class="refresh-line"></view>
+  <block wx:if="{{accounts.length > 0}}">
+    <block wx:for="{{accounts}}" wx:for-item="monthAccount">
+      <!-- <view class="list-item">
+        <view class="month-label">{{monthAccount.month}}</view>
+      </view> -->
+      <block wx:for="{{monthAccount.detail}}" wx:for-item="dayAccount">
+        <block wx:for="{{dayAccount.detail}}" wx:for-item="detailAccount" wx:for-index="idx">
+          <!-- <view class="list-item" bindtap="tapAccountItem"> -->
+          <view class="list-item {{del == detailAccount.id ? 'item-del' : ''}}">
+            <block wx:if="{{idx == 0}}">
+              <view class="day-label">{{months[monthAccount.month % 100 - 1] + dayAccount.date}}</view>
+            </block>
+             <view bindtap="deleteAccount" data-aid="{{detailAccount.id}}" class="item-dot {{dayAccount.day == 0 ? 'dot-sun' : (dayAccount.day == 6 ? 'dot-sta' : '')}} {{del == detailAccount.id ? 'dot-del' : ''}}">{{del == detailAccount.id ? '×' : ''}}</view> 
+            <view catchtap="tapAccountItem" bindtouchstart="touchStart" bindtouchend="touchEnd" data-aid="{{detailAccount.id}}" data-atype="{{detailAccount.type}}" 
+            data-amemid="{{detailAccount.memberId}}" data-acost="{{detailAccount.cost}}" data-amonth="{{monthAccount.month}}" 
+            data-adate="{{dayAccount.date}}" data-amemo="{{detailAccount.memo ? detailAccount.memo : ''}}" class="icon-item {{'type' + detailAccount.type}}"></view>
+            <view class="item-tag">{{detailAccount.cost}}</view>
+          </view>
+          <view wx:if="{{detailAccount.memo}}" class="list-item-memo">
+            <view class="item-tag-memo">{{detailAccount.memo}}</view>
+          </view>
+        </block>
+      </block>
+    </block>
+    <view class="list-item">
+      <view class="icon-item-bottom"></view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="line"></view>
+    <view class="tip"></view>
+  </block>
+</scroll-view>
