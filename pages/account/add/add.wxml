@@ -1,0 +1,76 @@
+<!--add.wxml-->
+<view class="wrapper" bindtap="cancelInput">
+<view class="cost-wrap" catchtap="inputCost">
+  <text>{{'￥ ' + cost}}</text>
+</view>
+<view class="type-list">
+  <block wx:for="{{types}}" wx:for-index="type" wx:for-item="name">
+    <view class="type-item" data-type="{{type}}" bindtap="typeChange">
+      <view class="icon-item {{'type' + type}} {{curType == type ? 'icon-item-active' : ''}}"></view>
+      <view class="{{curType == type ? 'label-item-active' : ''}}">{{name}}</view>
+    </view>
+  </block>
+</view>
+
+<view class="edt-area">
+  <view class="record-date" catchtap="editDate">{{year}}/{{month}}/{{day}}</view>
+  <view bindtap="toggleMemoInput" class="memo-btn"></view>
+</view>
+
+<form bindsubmit="submitRecord">
+<block wx:if="{{editing}}">
+  <textarea name="memo" class="memo-input" maxlength="25" auto-focus="true" placeholder="请输入20字以内备注" value="{{memo}}" />
+</block>
+<view class="op-area">
+  <button form-type="submit" type="primary" disabled="{{cost ? false : true}}" >{{func=='add' ? '记一笔' : '修改'}}</button>
+</view>
+</form>
+
+
+<view class="date-picker" hidden="{{dpHidden}}">
+  <picker-view indicator-style="height: 50px; border-color: #f6f0ce;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="dateChange">
+    <picker-view-column>
+      <view wx:for="{{years}}" style="line-height: 50px; text-align: center">{{item}}年</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" style="line-height: 50px; text-align: center">{{item}}月</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{days}}" style="line-height: 50px; text-align: center">{{item}}日</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+
+<view class="keyboard" hidden="{{kbHidden}}">
+  <view class="row">
+    <view class="col3 col-outer">
+      <view class="row">
+        <block wx:for="{{[1, 2, 3]}}">
+          <view class="col1 num" hover-class="btn-hover" data-op="{{item}}" catchtap="keyboardOp">{{item}}</view>
+        </block>
+      </view>
+      <view class="row">
+        <block wx:for="{{[4, 5, 6]}}">
+          <view class="col1 num" hover-class="btn-hover" data-op="{{item}}" catchtap="keyboardOp">{{item}}</view>
+        </block>
+      </view>
+    </view>
+    <view class="col1 op" hover-class="btn-hover" data-op="del" catchtap="keyboardOp">×</view>
+  </view>
+  <view class="row">
+    <view class="col3 col-outer">
+      <view class="row">
+        <block wx:for="{{[7, 8, 9]}}">
+          <view class="col1 num" hover-class="btn-hover" data-op="{{item}}" catchtap="keyboardOp">{{item}}</view>
+        </block>
+      </view>
+      <view class="row">
+        <view class="col2 num" hover-class="btn-hover" data-op="0" catchtap="keyboardOp">0</view>
+        <view class="col1 num" hover-class="btn-hover" data-op="dot" catchtap="keyboardOp">.</view>
+      </view>
+    </view>
+    <view class="col1 op" hover-class="btn-hover" data-op="ok" catchtap="keyboardOp">OK</view>
+  </view>
+</view>
+</view>
