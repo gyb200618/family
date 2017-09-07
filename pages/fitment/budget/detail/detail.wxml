@@ -1,65 +1,23 @@
 <!--detail.wxml-->
-<view class="list-item" bindtap="intoSpaceDetail">
-  <view class="classname">沙发</view>
+<block wx:for="{{detail}}" wx:for-index="idx" wx:for-item="item">
+<view class="list-item" data-idx="{{idx}}" bindtap="toggleDetail">
+  <view class="classname">{{item.name}}</view>
   <view class="bar">
-    <progress class="cost-bar" percent="70" color="#f6f0ce" activeColor="#f6f0ce" backgroundColor="#fff" />
-    <view class="label">2500</view>
+    <progress class="cost-bar" percent="{{item.budget / 100}}" color="#f6f0ce" activeColor="#f6f0ce" backgroundColor="#fff" />
+    <view class="label">{{item.budget}}</view>
   </view>
   <view class="bar">
-    <progress class="cost-bar" percent="80" backgroundColor="#fff" active/>
-    <view class="label">3000</view>
+    <progress class="cost-bar" percent="{{(item.price * item.count) / 100}}" backgroundColor="#fff" active/>
+    <view class="label">{{item.price * item.count}}</view>
   </view>
-  
-</view>
 
-<view class="list-item" bindtap="intoSpaceDetail">
-  <view class="classname">茶几</view>
-  <view class="bar">
-    <progress class="cost-bar" percent="35" color="#f6f0ce" activeColor="#f6f0ce" backgroundColor="#fff" />
-    <view class="label">800</view>
-  </view>
-  <view class="bar">
-    <progress class="cost-bar" percent="30" backgroundColor="#fff" active/>
-    <view class="label">600</view>
-  </view>
-  
-</view>
+  <block wx:if="{{item.showDetail}}">
+    <view class="info-row">型号:   {{item.model}}</view>
+    <view class="info-row">金额:   {{'' + item.price + ' * ' + item.count + ' = ' + (item.price * item.count)}}</view>
+    <view class="info-row">商家:   {{item.seller}}</view>
+    <view class="info-row">电话:   {{item.tel}}</view>
+  </block>
 
-<view class="list-item" bindtap="intoSpaceDetail">
-  <view class="classname">电视柜</view>
-  <view class="bar">
-    <progress class="cost-bar" percent="50" color="#f6f0ce" activeColor="#f6f0ce" backgroundColor="#fff" />
-    <view class="label">1000</view>
-  </view>
-  <view class="bar">
-    <progress class="cost-bar" percent="40" backgroundColor="#fff" active/>
-    <view class="label">1200</view>
-  </view>
-  
 </view>
+</block>
 
-<view class="list-item" bindtap="intoSpaceDetail">
-  <view class="classname">电视机</view>
-  <view class="bar">
-    <progress class="cost-bar" percent="80" color="#f6f0ce" activeColor="#f6f0ce" backgroundColor="#fff" />
-    <view class="label">3000</view>
-  </view>
-  <view class="bar">
-    <progress class="cost-bar" percent="90" backgroundColor="#fff" active/>
-    <view class="label">3600</view>
-  </view>
-  
-</view>
-
-<view class="list-item" bindtap="intoSpaceDetail">
-  <view class="classname">鞋柜</view>
-  <view class="bar">
-    <progress class="cost-bar" percent="20" color="#f6f0ce" activeColor="#f6f0ce" backgroundColor="#fff" />
-    <view class="label">400</view>
-  </view>
-  <view class="bar">
-    <progress class="cost-bar" percent="15" backgroundColor="#fff" active/>
-    <view class="label">300</view>
-  </view>
-  
-</view>

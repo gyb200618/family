@@ -1,5 +1,5 @@
 <!--list.wxml-->
-<view class="list-item" bindtap="intoSpaceDetail">
+<view class="list-item over-cost" bindtap="intoSpaceDetail">
   <view class="l-area">
     <view class="sample-img cat1"></view>
   </view>

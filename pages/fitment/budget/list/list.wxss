@@ -11,6 +11,10 @@
   overflow: hidden;
 }
 
+.over-cost {
+  border-color: #eb6133;
+}
+
 .list-item .l-area {
   width: 300rpx;
   border-right: 2rpx solid #f6f0ce;

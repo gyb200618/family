@@ -8,9 +8,9 @@
     "pages/task/list/list",
     "pages/task/create/create",
     "pages/account/add/add",
-    "pages/fitment/index/index",
     "pages/fitment/check/check",
     "pages/fitment/budget/list/list",
+    "pages/fitment/index/index",
     "pages/fitment/sample/sample",
     "pages/fitment/budget/detail/detail"
   ],

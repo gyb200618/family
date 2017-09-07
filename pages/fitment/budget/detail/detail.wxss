@@ -22,3 +22,9 @@
   width: 100rpx;
   text-align: right;
 }
+
+.info-row {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #d3d3d4;
+}
